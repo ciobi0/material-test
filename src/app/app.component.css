@@ -1,0 +1,18 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  #cat-house {
+      display:flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 500px;
+  }
+
+  .container{
+    display:flex;
+    justify-content: center;
+  }
