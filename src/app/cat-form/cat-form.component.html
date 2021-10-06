@@ -1,0 +1,39 @@
+<div class="form-container">
+    <h2>Inregistrati-va pisica in concursul nostru</h2>
+    <form class="form">
+        <!-- name -->
+        <mat-form-field appearance="standard">
+            <mat-label>Nume</mat-label>
+            <input matInput [formControl]="catNameFormControl">
+            <mat-icon matSuffix>pets</mat-icon>
+            <mat-hint>Scrieti numele pisicii aici</mat-hint>
+        </mat-form-field>
+
+        <!-- breed -->
+        <mat-form-field appearance="standard">
+            <mat-label>Breed</mat-label>
+            <input matInput [formControl]="catBreedFormControl">
+            <mat-icon matSuffix>pets</mat-icon>
+            <mat-hint>Scrieti rasa pisicii aici</mat-hint>
+        </mat-form-field>
+
+        <!-- description -->
+        <mat-form-field appearance="standard">
+            <mat-label>Description</mat-label>
+            <input matInput [formControl]="catDescriptionFormControl">
+            <mat-icon matSuffix>pets</mat-icon>
+            <mat-hint>Scrieti descrierea pisicii aici</mat-hint>
+        </mat-form-field>
+
+        <!-- likes -->
+        <mat-form-field appearance="standard">
+            <mat-label>Likes</mat-label>
+            <input matInput [formControl]="catLikesFormControl">
+            <mat-icon matSuffix>pets</mat-icon>
+            <mat-hint>Scrieti likes</mat-hint>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="saveCat()">Save</button>
+
+</div>

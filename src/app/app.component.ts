@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'material-test';
 
-  cats: Array<string>=["puffy","fliffy","bessy","nukey", "polly", "bibi"]
+  
 }

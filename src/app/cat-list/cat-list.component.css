@@ -1,0 +1,12 @@
+#cat-house {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.container{
+  display:flex;
+  justify-content: center;
+}
+
