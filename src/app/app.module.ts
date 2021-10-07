@@ -14,6 +14,10 @@ import { CatFormComponent } from './cat-form/cat-form.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { CatService } from './service/cat-service';
+import { HttpClientModule } from '@angular/common/http';
+import { CatProfileComponent } from './cat-profile/cat-profile.component';
+
 
 
 
@@ -22,7 +26,8 @@ import {MatInputModule} from '@angular/material/input';
     AppComponent,
     CatCardComponent,
     CatListComponent,
-    CatFormComponent
+    CatFormComponent,
+    CatProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +40,10 @@ import {MatInputModule} from '@angular/material/input';
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

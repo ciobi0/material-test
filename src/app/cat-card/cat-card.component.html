@@ -1,4 +1,4 @@
-<mat-card class="example-card">
+<mat-card class="example-card" [ngClass]="{'smelly-cat' : cat.likes < 0}">
     <mat-card-header>
       <mat-card-title>{{cat.name}}</mat-card-title>
       <mat-card-subtitle>{{cat.breed}}</mat-card-subtitle>
@@ -17,6 +17,7 @@
         </button>
         <div>
           {{cat.likes}}
+          <p *ngIf="cat.likes > 10">You rock!!!</p>
         </div>
         <button mat-button (click)="decreaseLikes()">
           <mat-icon>thumb_down</mat-icon>

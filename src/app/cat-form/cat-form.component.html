@@ -32,6 +32,14 @@
             <mat-icon matSuffix>pets</mat-icon>
             <mat-hint>Scrieti likes</mat-hint>
         </mat-form-field>
+
+        <!-- image -->
+        <mat-form-field appearance="standard">
+            <mat-label>Image</mat-label>
+            <input matInput [formControl]="catImageFormControl">
+            <mat-icon matSuffix>pets</mat-icon>
+            <mat-hint>Introduceti imaginea</mat-hint>
+        </mat-form-field>
     </form>
 
     <button mat-raised-button (click)="saveCat()">Save</button>

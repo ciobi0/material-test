@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { CatListComponent } from '../cat-list/cat-list.component';
 import { NewCat, Cat } from '../model/cat';
 import { LocalData } from '../model/local-data';
+import { CatService } from '../service/cat-service';
 
 @Component({
   selector: 'app-cat-form',
@@ -22,8 +23,11 @@ export class CatFormComponent implements OnInit {
   catDescriptionFormControl = new FormControl()
   // form control for likes
   catLikesFormControl = new FormControl()
+  // form control for image
+  catImageFormControl = new FormControl()
   
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private catService:CatService) { }
 
   ngOnInit(): void {
   }
@@ -39,12 +43,22 @@ export class CatFormComponent implements OnInit {
     this.newCat.description = this.catDescriptionFormControl.value
 
     this.newCat.likes = this.catLikesFormControl.value
+    
+    this.newCat.image = this.catImageFormControl.value
+    
     console.log(this.newCat)
 
-    var cat = this.newCat as Cat
-    cat.id = LocalData.localCats.length
-    LocalData.localCats.push(cat)
-    this.router.navigate(["cats"])
+    // var cat = this.newCat as Cat
+    // cat.id = LocalData.localCats.length
+    // LocalData.localCats.push(cat)
+   // this.router.navigate(["cats"])
+   console.log(LocalData.localCats)
+   this.catService.createCat(this.newCat).subscribe(
+     successfullResponse =>{
+       this.router.navigate(["cats"])
+     },
+     error => alert("could not save cat")
+   )
   }
 
 }
