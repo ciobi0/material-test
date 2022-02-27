@@ -5,10 +5,10 @@ import { CatListComponent } from './cat-list/cat-list.component';
 import { CatProfileComponent } from './cat-profile/cat-profile.component';
 
 const routes: Routes = [
-  {path: "cats", component: CatListComponent},
+  {path: "cat", component: CatListComponent},
   {path: "new-cat", component: CatFormComponent},
   {path: "cats/:id", component: CatProfileComponent},
-  {path: "", redirectTo: "cats", pathMatch:"full"}
+  {path: "", redirectTo: "cat", pathMatch:"full"}
 ];
 
 @NgModule({

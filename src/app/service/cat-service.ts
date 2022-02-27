@@ -12,11 +12,11 @@ export class CatService{
 
     //c
     public createCat(newCat: NewCat): Observable<any>{
-       return this.http.post("https://enuxai24hrxjpr9.m.pipedream.net/cat", newCat)
+       return this.http.post("http://localhost:8080/cat", newCat)
     }
 
     //r
     public getCats(): Observable<any>{
-     return this.http.get("https://enuxai24hrxjpr9.m.pipedream.net/cats") // returneaza un observable
+     return this.http.get("http://localhost:8080/cat") // returneaza un observable
     }
 }

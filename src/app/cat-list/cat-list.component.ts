@@ -22,7 +22,7 @@ cats: Array<Cat> = []
       successfullresponse => {
         this.cats = successfullresponse
       },
-      errorResponse => {alert(errorResponse)}
+      errorResponse => {alert(errorResponse + " no cats from server")}
     )
   }
 

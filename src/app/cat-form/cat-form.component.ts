@@ -55,7 +55,7 @@ export class CatFormComponent implements OnInit {
    console.log(LocalData.localCats)
    this.catService.createCat(this.newCat).subscribe(
      successfullResponse =>{
-       this.router.navigate(["cats"])
+       this.router.navigate(["cat"])
      },
      error => alert("could not save cat")
    )
